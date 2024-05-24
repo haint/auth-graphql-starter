@@ -7,12 +7,13 @@ const passport = require('passport');
 const passportConfig = require('./services/auth');
 const MongoStore = require('connect-mongo')(session);
 const schema = require('./schema/schema');
+require('dotenv').config();
 
 // Create a new Express application
 const app = express();
 
 // Replace with your Mongo Atlas URI
-const MONGO_URI = '';
+const MONGO_URI = process.env.MONGO_URI;
 if (!MONGO_URI) {
   throw new Error('You must provide a Mongo Atlas URI');
 }
