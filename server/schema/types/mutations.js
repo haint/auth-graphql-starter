@@ -1,4 +1,4 @@
-const AuthService = require('../services/auth')
+const AuthService = require('../../services/auth')
 
 const graphql = require('graphql');
 
@@ -7,7 +7,7 @@ const {
   GraphQLString,
 } = graphql;
 
-const UserType = require('./types/user_type');
+const UserType = require('./user_type');
 
 const mutation = new GraphQLObjectType({
   name: 'Mutation',
